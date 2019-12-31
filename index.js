@@ -22,6 +22,9 @@ const server = http.createServer( app );
 server.listen( PORT, () => {
     const { port, address } = server.address();
     console.log( `Server listening ${address} on port ${port}` );
+    setTimeout( () => {
+        throw new Error( 'Test error' );
+    }, randomInteger( 3000, 10000 ) )
 });
 
 process.on( 'uncaughtException', handleError );
