@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --attach",
+    "start": "pm2-runtime start index.js",
     "start_dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/erqqwerqyandexru/test-heroku-pm2#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "pm2": "^4.2.1"
   }
 }
