@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2-runtime start index.js",
-    "start_dev": "node index.js",
+    "start": "node index.js",
+    "start_with_pm2_on_heroku": "pm2-runtime start wrapper.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +20,7 @@
   "homepage": "https://github.com/erqqwerqyandexru/test-heroku-pm2#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "pm2": "^4.2.1"
+    "heroku-client": "^3.1.0",
+    "morgan": "^1.9.1"
   }
 }

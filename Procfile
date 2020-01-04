@@ -1,0 +1,1 @@
+web: npm run start_with_pm2_on_heroku
