@@ -11,9 +11,9 @@ const heroku = new Heroku({ token: HEROKU_API_KEY });
 
 require( './index.js' );
 
-process.on( 'uncaughtException', handleHerokuError );
+process.on( 'appError', handleError );
 
-function handleHerokuError( err ) {
+function handleError( err ) {
     console.log( 'Heroku error' );
 
     // Hook for process.exit()

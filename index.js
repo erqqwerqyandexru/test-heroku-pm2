@@ -31,6 +31,7 @@ process.on( 'uncaughtException', handleError );
 
 function handleError( err ) {
     console.error( err );
+    process.emit( 'appError', err );
     setTimeout( () => {
         process.exit( 1 );
     }, 1000 ).unref();
